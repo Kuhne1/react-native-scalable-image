@@ -9,8 +9,11 @@ import PropTypes from 'prop-types';
 import {
     Image,
     TouchableOpacity,
-    ImageBackground
+    ImageBackground,
+    Dimensions
 } from 'react-native';
+
+const screen = Dimensions.get('window');
 
 const resolveAssetSource = Image.resolveAssetSource;
 
