@@ -19,8 +19,8 @@ const ScalableImage = props => {
         ? ImageBackground
         : Image;
 
-    const [scalableWidth, setScalableWidth] = useState(null);
-    const [scalableHeight, setScalableHeight] = useState(null);
+    const [scalableWidth, setScalableWidth] = useState(screen.width);
+    const [scalableHeight, setScalableHeight] = useState(screen.width * 1.3328125);
     const [image, setImage] = useState(<ImageComponent />);
     const mounted = useRef(false);
 
@@ -115,7 +115,7 @@ ScalableImage.propTypes = {
 
 ScalableImage.defaultProps = {
     background: false,
-    onSize: size => {}
+    onSize: size => { }
 };
 
 export default ScalableImage;
